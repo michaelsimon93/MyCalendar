@@ -15,11 +15,147 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="UZv-7e-jfv">
+                                <rect key="frame" x="0.0" y="290" width="600" height="310"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="i8R-fn-wPv">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i8R-fn-wPv" id="Ojg-bs-ddE">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="040-fu-tnh" kind="show" identifier="ViewEventSegue" id="0Zh-1G-v2X"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YKr-a6-Sz1">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="us4-p0-ttd">
+                                        <barButtonItem key="rightBarButtonItem" title="Create Event" id="Hmn-B2-Ebj">
+                                            <connections>
+                                                <segue destination="Gez-iP-Nac" kind="show" identifier="AddEventSegue" id="FKg-AH-zFV"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="LUm-7U-NB9">
+                                <rect key="frame" x="63" y="93" width="474" height="175"/>
+                                <date key="date" timeIntervalSinceReferenceDate="479249018.39879698">
+                                    <!--2016-03-09 20:43:38 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LUm-7U-NB9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="73" id="Gkc-L8-iKj"/>
+                            <constraint firstAttribute="centerX" secondItem="YKr-a6-Sz1" secondAttribute="centerX" id="RDN-UR-Agk"/>
+                            <constraint firstAttribute="centerX" secondItem="LUm-7U-NB9" secondAttribute="centerX" id="amf-5f-vRe"/>
+                            <constraint firstItem="YKr-a6-Sz1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="c3s-xS-qLn"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Create Event View Controller-->
+        <scene sceneID="O44-Wd-eGl">
+            <objects>
+                <viewController id="Gez-iP-Nac" customClass="CreateEventViewController" customModule="MyCalendar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7T8-P0-djg"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gpx-ip-Jn0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pG6-S7-am8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9FV-m1-Qq6">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="dWr-MF-llW">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="8PS-8Y-6nE">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="CancelCreateSegue" id="JyL-HJ-NeC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Add" id="8qz-Aj-bjR">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="CreateSegue" id="SQq-Be-fBw"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cI2-Ij-4GD" customClass="Create">
+                                <rect key="frame" x="85" y="105" width="431" height="176"/>
+                                <date key="date" timeIntervalSinceReferenceDate="479249517.18568099">
+                                    <!--2016-03-09 20:51:57 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C0J-4X-d47">
+                                <rect key="frame" x="252" y="314" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bm7-Z0-DMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1198" y="130"/>
+        </scene>
+        <!--Event View Controller-->
+        <scene sceneID="Wke-eo-qfc">
+            <objects>
+                <viewController id="040-fu-tnh" customClass="EventViewController" customModule="MyCalendar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eU3-RD-BHP"/>
+                        <viewControllerLayoutGuide type="bottom" id="dm0-Ag-IVU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Bt-HG-EdB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="clD-d4-Hiz">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="wnt-uZ-lBo">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="4RM-Ge-TSA">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="CancelDeleteSegue" id="gzh-4m-DN0"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Delete" id="JgQ-kW-EqJ">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="DeleteSegue" id="qRf-JV-fxd"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzR-VW-vnZ">
+                                <rect key="frame" x="279" y="182" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qV3-hI-7Zb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1198" y="892"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qRf-JV-fxd"/>
+    </inferredMetricsTieBreakers>
 </document>

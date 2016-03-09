@@ -13,6 +13,9 @@
 		302E0CBE1C90C1370041B251 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 302E0CBD1C90C1370041B251 /* Images.xcassets */; };
 		302E0CC11C90C1370041B251 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302E0CBF1C90C1370041B251 /* LaunchScreen.xib */; };
 		302E0CCD1C90C1370041B251 /* MyCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302E0CCC1C90C1370041B251 /* MyCalendarTests.swift */; };
+		302E0CD71C90C63F0041B251 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302E0CD61C90C63F0041B251 /* CreateEventViewController.swift */; };
+		302E0CD91C90C6510041B251 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302E0CD81C90C6510041B251 /* EventViewController.swift */; };
+		7C736CDE6CB181679BD1941F /* libPods-MyCalendar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6851413961DEF457231367BC /* libPods-MyCalendar.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,11 @@
 		302E0CC61C90C1370041B251 /* MyCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		302E0CCB1C90C1370041B251 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		302E0CCC1C90C1370041B251 /* MyCalendarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCalendarTests.swift; sourceTree = "<group>"; };
+		302E0CD61C90C63F0041B251 /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		302E0CD81C90C6510041B251 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		41005D01ACC00C0CB724B952 /* Pods-MyCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCalendar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCalendar/Pods-MyCalendar.debug.xcconfig"; sourceTree = "<group>"; };
+		4810069A8E7407553FA5A683 /* Pods-MyCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCalendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCalendar/Pods-MyCalendar.release.xcconfig"; sourceTree = "<group>"; };
+		6851413961DEF457231367BC /* libPods-MyCalendar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCalendar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C736CDE6CB181679BD1941F /* libPods-MyCalendar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +65,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3025E5C24766209F5301B5EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6851413961DEF457231367BC /* libPods-MyCalendar.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		302E0CA81C90C1370041B251 = {
 			isa = PBXGroup;
 			children = (
 				302E0CB31C90C1370041B251 /* MyCalendar */,
 				302E0CC91C90C1370041B251 /* MyCalendarTests */,
 				302E0CB21C90C1370041B251 /* Products */,
+				7AB90EA41A27D5F389208001 /* Pods */,
+				3025E5C24766209F5301B5EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +98,8 @@
 			children = (
 				302E0CB61C90C1370041B251 /* AppDelegate.swift */,
 				302E0CB81C90C1370041B251 /* ViewController.swift */,
+				302E0CD61C90C63F0041B251 /* CreateEventViewController.swift */,
+				302E0CD81C90C6510041B251 /* EventViewController.swift */,
 				302E0CBA1C90C1370041B251 /* Main.storyboard */,
 				302E0CBD1C90C1370041B251 /* Images.xcassets */,
 				302E0CBF1C90C1370041B251 /* LaunchScreen.xib */,
@@ -112,6 +133,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7AB90EA41A27D5F389208001 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41005D01ACC00C0CB724B952 /* Pods-MyCalendar.debug.xcconfig */,
+				4810069A8E7407553FA5A683 /* Pods-MyCalendar.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +149,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 302E0CD01C90C1370041B251 /* Build configuration list for PBXNativeTarget "MyCalendar" */;
 			buildPhases = (
+				6A510C3C56078A3ABE08A927 /* Check Pods Manifest.lock */,
 				302E0CAD1C90C1370041B251 /* Sources */,
 				302E0CAE1C90C1370041B251 /* Frameworks */,
 				302E0CAF1C90C1370041B251 /* Resources */,
+				5D9631AF416D6D61E10E44BD /* Embed Pods Frameworks */,
+				9CA62F694401B7665B4E2D28 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,13 +240,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5D9631AF416D6D61E10E44BD /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCalendar/Pods-MyCalendar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A510C3C56078A3ABE08A927 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9CA62F694401B7665B4E2D28 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyCalendar/Pods-MyCalendar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		302E0CAD1C90C1370041B251 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				302E0CB91C90C1370041B251 /* ViewController.swift in Sources */,
+				302E0CD91C90C6510041B251 /* EventViewController.swift in Sources */,
 				302E0CB71C90C1370041B251 /* AppDelegate.swift in Sources */,
+				302E0CD71C90C63F0041B251 /* CreateEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +423,7 @@
 		};
 		302E0CD11C90C1370041B251 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41005D01ACC00C0CB724B952 /* Pods-MyCalendar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyCalendar/Info.plist;
@@ -350,6 +434,7 @@
 		};
 		302E0CD21C90C1370041B251 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4810069A8E7407553FA5A683 /* Pods-MyCalendar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyCalendar/Info.plist;
@@ -411,6 +496,7 @@
 				302E0CD21C90C1370041B251 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		302E0CD31C90C1370041B251 /* Build configuration list for PBXNativeTarget "MyCalendarTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +505,7 @@
 				302E0CD51C90C1370041B251 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
