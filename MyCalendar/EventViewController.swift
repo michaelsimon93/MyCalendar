@@ -10,6 +10,12 @@ import UIKit
 
 class EventViewController: UIViewController {
 
+    @IBAction func BackButton(sender: AnyObject) {
+    
+    }
+    
+    @IBOutlet weak var DeleteEventButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,7 +28,7 @@ class EventViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -30,6 +36,6 @@ class EventViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+
 
 }

@@ -10,6 +10,14 @@ import UIKit
 
 class CreateEventViewController: UIViewController {
 
+    @IBAction func CancelCreateButton(sender: AnyObject) {
+    
+    }
+    
+    @IBAction func AddEventButton(sender: AnyObject) {
+    
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,7 +30,7 @@ class CreateEventViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -30,6 +38,5 @@ class CreateEventViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
 
 }
