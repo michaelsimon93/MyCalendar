@@ -70,7 +70,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("dateCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("dateCell", forIndexPath: indexPath) 
         
         //Configure the cell...
         let currentEvent = events[indexPath.row]
@@ -78,6 +78,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel!.text = currentEvent.valueForKey("title") as? String
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let selectedEvent = events[indexPath.row]
+        self.performSegueWithIdentifier("ViewEventSegue", sender: selectedEvent)
+        
     }
     
     
@@ -129,15 +136,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         if (segue.identifier == "ViewEventSegue") {
             
+            let selectedEvent = sender as! NSManagedObject
             let eventVC = segue.destinationViewController as! EventViewController
+            eventVC.currentEvent = selectedEvent
             
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                let selectedEvent = events[indexPath.row]
-                eventVC.currentEvent = selectedEvent
-            }
-            
-        }
         
+        }
         if (segue.identifier == "AddEventSegue") {
             
             let createVC = segue.destinationViewController as! CreateEventViewController
