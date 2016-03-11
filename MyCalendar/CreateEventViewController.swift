@@ -42,7 +42,7 @@ class CreateEventViewController: UIViewController {
         newEvent.setValue(AddEventText, forKey: "title")
         
         do {
-        try manageContext.save()
+        try (manageContext.save())
         }
         catch (let error, s, NSError) {
             print("Could not save \(error), \(error.userInfo)")
@@ -84,12 +84,11 @@ class CreateEventViewController: UIViewController {
         if (segue.identifier == "CancelSegue") {
             let vc = segue.destinationViewController as! ViewController
         }
-        
+        /*
         if (segue.identifier == "CreateSegue") {
             let vc = segue.destinationViewController as! ViewController
-            let 
         }
-        
+        */
         
         //I might need to add some functionality if the segues don't pass the data
     }
