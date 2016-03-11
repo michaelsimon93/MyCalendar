@@ -35,7 +35,7 @@
                                     <!--2016-03-09 20:43:38 +0000-->
                                 </date>
                             </datePicker>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="UZv-7e-jfv">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="UZv-7e-jfv">
                                 <rect key="frame" x="0.0" y="290" width="600" height="310"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -62,8 +62,10 @@
                             <constraint firstAttribute="centerX" secondItem="UZv-7e-jfv" secondAttribute="centerX" id="831-jx-m6F"/>
                             <constraint firstItem="LUm-7U-NB9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="73" id="Gkc-L8-iKj"/>
                             <constraint firstAttribute="centerX" secondItem="YKr-a6-Sz1" secondAttribute="centerX" id="RDN-UR-Agk"/>
+                            <constraint firstAttribute="width" secondItem="UZv-7e-jfv" secondAttribute="width" id="Vjg-BQ-rkh"/>
                             <constraint firstAttribute="centerX" secondItem="LUm-7U-NB9" secondAttribute="centerX" id="amf-5f-vRe"/>
                             <constraint firstItem="YKr-a6-Sz1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="c3s-xS-qLn"/>
+                            <constraint firstAttribute="centerY" secondItem="UZv-7e-jfv" secondAttribute="centerY" constant="-145" id="dBq-WY-UJF"/>
                             <constraint firstItem="UZv-7e-jfv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="270" id="iP4-nO-wi9"/>
                             <constraint firstItem="YKr-a6-Sz1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="uKC-3h-SgA"/>
                         </constraints>

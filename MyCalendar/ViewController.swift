@@ -126,17 +126,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // Get the new view controller using segue.destinationViewController.
     // Pass the selected object to the new view controller.
         
-        /*
-        
-        //how to format the time
-        let timeFormatter = NSDateFormatter()
-        
-        //styling the line
-        timeFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
-        
-        //converting the time into a string
-        let strTime = timeFormatter.stringFromDate(TimeSelector.date)
-        */
         
         if (segue.identifier == "ViewEventSegue") {
             

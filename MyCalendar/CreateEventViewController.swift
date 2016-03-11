@@ -25,7 +25,18 @@ class CreateEventViewController: UIViewController {
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
-        newEvent.setValue(TimePicker, forKey: "time")
+        
+        //how to format the time
+        let timeFormatter = NSDateFormatter()
+        
+        //styling the line
+        timeFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        
+        //converting the time into a string
+        let strTime = timeFormatter.stringFromDate(TimePicker.date)
+
+        
+        newEvent.setValue(strTime, forKey: "time")
         newEvent.setValue(AddEventText, forKey: "event")
         newEvent.setValue(date, forKey: "date")
         newEvent.setValue(AddEventText, forKey: "title")

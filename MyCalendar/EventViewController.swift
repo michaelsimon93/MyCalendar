@@ -27,18 +27,16 @@ class EventViewController: UIViewController {
     @IBOutlet weak var EventLabel: UILabel!
     var currentEvent : NSManagedObject?
     let dateFormat = NSDateFormatter()
-    var timeFormat = NSDateFormatter()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         title = currentEvent?.valueForKey("title") as! String?
         dateFormat.dateFormat = "MM/DD/YYYY"
-        timeFormat.dateFormat = "HH:MM xx"
         DateLabel.text = currentEvent?.valueForKey("date")!.dateFormat as String?
         EventLabel.text = currentEvent?.valueForKey("event") as! String?
-        TimeLabel.text = currentEvent?.valueForKey("time")!.timeFormat as! String?
+        TimeLabel.text = currentEvent?.valueForKey("time") as! String?
         
     }
 
