@@ -16,7 +16,8 @@
 		302E0CD71C90C63F0041B251 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302E0CD61C90C63F0041B251 /* CreateEventViewController.swift */; };
 		302E0CD91C90C6510041B251 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302E0CD81C90C6510041B251 /* EventViewController.swift */; };
 		302E0CDB1C90C9F80041B251 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302E0CDA1C90C9F80041B251 /* Event.swift */; };
-		7C736CDE6CB181679BD1941F /* libPods-MyCalendar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6851413961DEF457231367BC /* libPods-MyCalendar.a */; };
+		302E0CDD1C914CCD0041B251 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302E0CDC1C914CCD0041B251 /* TableViewCell.swift */; };
+		6770777B74F69A2A3DD9A703 /* Pods_MyCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D9F58B73D3C300DC645029 /* Pods_MyCalendar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +44,10 @@
 		302E0CD61C90C63F0041B251 /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		302E0CD81C90C6510041B251 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		302E0CDA1C90C9F80041B251 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = MyCalendar/Event.swift; sourceTree = "<group>"; };
+		302E0CDC1C914CCD0041B251 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = ../../Calendar/Calendar/TableViewCell.swift; sourceTree = "<group>"; };
 		41005D01ACC00C0CB724B952 /* Pods-MyCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCalendar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCalendar/Pods-MyCalendar.debug.xcconfig"; sourceTree = "<group>"; };
 		4810069A8E7407553FA5A683 /* Pods-MyCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCalendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyCalendar/Pods-MyCalendar.release.xcconfig"; sourceTree = "<group>"; };
-		6851413961DEF457231367BC /* libPods-MyCalendar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyCalendar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6D9F58B73D3C300DC645029 /* Pods_MyCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C736CDE6CB181679BD1941F /* libPods-MyCalendar.a in Frameworks */,
+				6770777B74F69A2A3DD9A703 /* Pods_MyCalendar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +72,7 @@
 		3025E5C24766209F5301B5EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6851413961DEF457231367BC /* libPods-MyCalendar.a */,
+				B6D9F58B73D3C300DC645029 /* Pods_MyCalendar.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -103,6 +105,7 @@
 				302E0CB81C90C1370041B251 /* ViewController.swift */,
 				302E0CD61C90C63F0041B251 /* CreateEventViewController.swift */,
 				302E0CD81C90C6510041B251 /* EventViewController.swift */,
+				302E0CDC1C914CCD0041B251 /* TableViewCell.swift */,
 				302E0CBA1C90C1370041B251 /* Main.storyboard */,
 				302E0CBD1C90C1370041B251 /* Images.xcassets */,
 				302E0CBF1C90C1370041B251 /* LaunchScreen.xib */,
@@ -299,6 +302,7 @@
 				302E0CB91C90C1370041B251 /* ViewController.swift in Sources */,
 				302E0CD91C90C6510041B251 /* EventViewController.swift in Sources */,
 				302E0CB71C90C1370041B251 /* AppDelegate.swift in Sources */,
+				302E0CDD1C914CCD0041B251 /* TableViewCell.swift in Sources */,
 				302E0CD71C90C63F0041B251 /* CreateEventViewController.swift in Sources */,
 				302E0CDB1C90C9F80041B251 /* Event.swift in Sources */,
 			);

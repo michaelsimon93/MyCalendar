@@ -7,14 +7,37 @@
 //
 
 import UIKit
+import CoreData
 
 class CreateEventViewController: UIViewController {
 
-    @IBAction func CancelCreateButton(sender: AnyObject) {
+    var newEvent : NSManagedObject!
     
+    @IBOutlet weak var TimePicker: UIDatePicker!
+    @IBOutlet weak var AddEventText: UITextField!
+    var date: UIDatePicker!
+    
+    @IBAction func CancelCreateButton(sender: AnyObject) {
+        performSegueWithIdentifier("CancelSegue", sender: self)
     }
     
     @IBAction func AddEventButton(sender: AnyObject) {
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        newEvent.setValue(TimePicker, forKey: "time")
+        newEvent.setValue(AddEventText, forKey: "event")
+        newEvent.setValue(date, forKey: "date")
+        newEvent.setValue(AddEventText, forKey: "title")
+        
+        do {
+        try managedContext.save()
+        }
+        catch (let error as NSError) {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+        
+        performSegueWithIdentifier("CreateSegue", sender: self)
     
     }
     
@@ -22,6 +45,7 @@ class CreateEventViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        title = "Create Event"
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +61,10 @@ class CreateEventViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        let vc = segue.destinationViewController as! ViewController
+        
+        //I might need to add some functionality if the segues don't pass the data
     }
 
 }
